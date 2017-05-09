@@ -26,6 +26,7 @@ function resetFields() {
     $("input.new-street").val("");
     $("input.new-city").val("");
     $("input.new-state").val("");
+    $(".additional-address").remove();
 }
 
 
@@ -39,19 +40,19 @@ var clicks = 0;
 $(function() {
   $("#add-address").click(function() {
     $("#new-addresses").append('<div class="new-address">' +
-                                 '<div class="form-group">' +
+                                 '<div class="form-group additional-address">' +
                                    '<label for="new-street">Street</label>' +
                                    '<input type="text" class="form-control new-street">' +
                                  '</div>' +
-                                 '<div class="form-group">' +
+                                 '<div class="form-group additional-address">' +
                                    '<label for="new-city">City</label>' +
                                    '<input type="text" class="form-control new-city">' +
                                  '</div>' +
-                                 '<div class="form-group">' +
+                                 '<div class="form-group additional-address">' +
                                    '<label for="new-state">State</label>' +
                                    '<input type="text" class="form-control new-state">' +
                                  '</div>' +
-                                 '<div class="radio">' +
+                                 '<div class="radio additional-address">' +
                                     '<label>' +
                                       '<input type="radio" name="radioOption' + clicks +
                                       '" id="home" value="home" checked>' +
