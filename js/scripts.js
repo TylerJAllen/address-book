@@ -28,9 +28,15 @@ function resetFields() {
     $("input.new-state").val("");
 }
 
+
+var clicks = 0;
+    function onClick() {
+        clicks += 1;
+        // document.getElementById("add-address").innerHTML = clicks;
+    };
+
 //User Interface Logic
 $(function() {
-
   $("#add-address").click(function() {
     $("#new-addresses").append('<div class="new-address">' +
                                  '<div class="form-group">' +
@@ -47,11 +53,13 @@ $(function() {
                                  '</div>' +
                                  '<div class="radio">' +
                                     '<label>' +
-                                      '<input type="radio" name="radioOption2" id="home" value="home" checked>' +
+                                      '<input type="radio" name="radioOption' + clicks +
+                                      '" id="home" value="home" checked>' +
                                       'Home' +
                                     '</label>' + ' ' +
                                     '<label>' +
-                                      '<input type="radio" name="radioOption2" id="evilGenius" value="evilGenius">' +
+                                      '<input type="radio" name="radioOption' + clicks +
+                                      '" id="evilGenius" value="evilGenius">' +
                                       'Evil Genius Laboratory' +
                                     '</label>' +
                                   '</div>' +
